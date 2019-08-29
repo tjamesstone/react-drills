@@ -13,8 +13,8 @@ class App extends Component {
 
 
   render() {
-    const list = this.state.cities.map((val, i) => {
-      return <h2 key={i}>{val}</h2>
+    const list = this.state.cities.map((val) => {
+      return <h2>{val}</h2>
     }
     )
     return (
