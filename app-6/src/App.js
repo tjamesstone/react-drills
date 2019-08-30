@@ -1,31 +1,30 @@
 import React, { Component } from "react";
-
+import logo from "./logo.svg";
 import "./App.css";
-import Todo from './Todo'
+import Todo from "./Todo";
 
 class App extends Component {
-  constructor(){
-    super()
+  constructor() {
+    super();
+
     this.state = {
       list: [],
-      input: ''
-    }
-    this.handleAddTask = this.handleAddTask.bind(this)
+      input: ""
+    };
+
+    this.handleAddTask = this.handleAddTask.bind(this);
   }
 
-  handleInputChange(value){
-    this.setState({ input:value})
+  handleInputChange(value) {
+    this.setState({ input: value });
   }
 
-  handleAddTask(event){
+  handleAddTask() {
     this.setState({
       list: [...this.state.list, this.state.input],
-      input: ''
-    })
+      input: ""
+    });
   }
-
-
-
 
   render() {
     let list = this.state.list.map((element, index) => {
