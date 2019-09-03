@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import Todo from "./Todo";
+import Image from "./Image"
 
 class App extends Component {
   constructor() {
@@ -48,6 +48,11 @@ class App extends Component {
         <br />
 
         {list}
+
+        <hr/>
+
+        <Image />
+
       </div>
     );
   }
